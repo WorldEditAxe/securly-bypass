@@ -1,0 +1,15 @@
+{
+    "name": "securly-bypass",
+    "version": "1.0.0",
+    "description": "Bypass Securly's annoying blocks!",
+    "main": "index.js",
+    "scripts": {
+      "test": "node index.js"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+      "dns2": "^2.0.5"
+    }
+}
