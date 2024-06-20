@@ -1,13 +1,16 @@
 # Securly Bypasser
 An unpatchable, effective and reliable exploit for bypassing Securly (extension).  
 Can be used at home or at school. Break your school Chromebook from its shackles!
+
+## DISCONTINUED
+The code technically works today, but the public server is no longer up, and Securly themselves have written a patch/workaround to effectively render this ineffective. As such, I have decided to archive and release this code publically under the MIT license. Have fun! This may or may not work with other device management solutions.
 ## About
 Securly Bypasser is a server made to exploit and disable the Securly extension. Unlike other circumvention methods, it is highly effective, works with all websites and can bypass both the school firewall AND the Securly extension itself. In addition, it also disables telemetry and data logging for the extension, preventing device owners and administrators from peeking on what you're doing.  
 
 The exploit, unlike using website proxies such as Ultraviolet, utilizes DNS spoofing to block communications with Securly servers, preventing the extension from both logging traffic and blocking websites. The server itself is a DNS server acting like a middleman sitting between the DNS servers and the client accessing it. It detects Securly domain lookup requests, blocks them, and therefore preventing Securly's extensions from communicating with Securly. Depending on how it is set up, it can be unpatchable and unfixable.
 ## Setup
 ### 1. Setting Up a Server
-The bypass software is written in Node.js, allowing it to be ran anywhere Node.js can be ran, including iOS powered devices. If you do not want to go through the hassle of setting up a bypass DNS server, use this public one: `141.148.132.76`
+The bypass software is written in Node.js, allowing it to be ran anywhere Node.js can be ran, including iOS powered devices.
 #### iOS
 Setting it is possible for Android (via Termux), but instructions will not be gone over here.  
 **IMPORTANT!** Due to iOS limitations, apps cannot run in the background and thus you will have to stay on the CodeSandbox app with the screen on.
@@ -23,7 +26,7 @@ If you do not want to go through the hassle of setting one up, just use the publ
 ### 2. Connecting to the Server
 There are many configurations in which you can connect to the server in. Take a look below.
 #### Home Wi-Fi (unfirewalled)
-Set the DNS to the public resolver listed above (`141.148.132.76`). Or, follow the instructions sent in console after the server starts (iOS only).
+Follow the instructions sent in console after the server starts (iOS only).
 #### School Wi-Fi (firewalled)
 The DNS resolver on its own will not work behind a school firewall, let alone on a non-configurable Wi-Fi network (most admins block modification of DNS settings on school Wi-Fi). You will need to use a phone hotspot in order to get around this. Instructions are iOS only.
 ##### Self-hosted Resolver
@@ -32,12 +35,6 @@ The DNS resolver on its own will not work behind a school firewall, let alone on
 2. Enable the mobile hotspot in Settings.
 3. Connect to the hotspot on your Chromebook.
 4. You're done! Don't forget to stay in CodeSandbox with the display on, or the server will be stopped by iOS.
-##### Public Resolver
-Use this if you can change the hotspot's DNS server. Otherwise, refer to the self-hosted method.
-1. Start the hotspot on your device of your choice.
-2. On your Chromebook, set the Wi-Fi's network's DNS to the public resolver (`141.148.132.76`).
-3. You're done!
-If these do not work (no hotspot), check below for some alternatives.
 ## Alternative Methods
 If the above methods do not work (no hotspot), check this list for alternatives.
 ### Chrome OS Storage Exploit
